@@ -1,5 +1,5 @@
 {% set name = "syntok" %}
-{% set version = "1.3.3" %}
+{% set version = "1.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e8ed80c88d828011e9716dba6d1915f789aae6710447ec47cd2d2d5a4a4a2b23
+  sha256: 7d69b421137b638bac166eb88c6a2e7d0cdf42ab06f3e33e3ed6e4306f4bc9b5
 
 build:
   number: 0
