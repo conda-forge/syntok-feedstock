@@ -16,12 +16,14 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
+  build:
+    - poetry-core >=1.0.0
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
   run:
-    - python >=3.5
-    - regex
+    - python >=3.6
+    - regex >2016
 
 test:
   imports:
