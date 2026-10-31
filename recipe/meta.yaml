@@ -1,5 +1,5 @@
 {% set name = "syntok" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.4" %}
 
 
 package:
@@ -7,13 +7,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7ee9016139f04c7424e6c5771a46fd5622991cff54c781e9e31270214d3276fe
+  # 1.4.3 and 1.4.4 were published to PyPI as wheels only, so build from the GitHub tag
+  url: https://github.com/fnl/syntok/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: d4f7ff32c7a9b80032c101a4c7257ada343da7d5369e41477c55457ec65a1548
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
